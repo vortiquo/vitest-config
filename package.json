@@ -1,6 +1,6 @@
 {
   "name": "@vortiquo/vitest-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared Vitest configurations for React, Next.js, and Node.js projects",
   "type": "module",
   "main": "./index.ts",
