@@ -1,0 +1,75 @@
+{
+  "name": "@vortiquo/vitest-config",
+  "version": "0.0.1",
+  "description": "Shared Vitest configurations for React, Next.js, and Node.js projects",
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "author": "Vortiquo <dev@vortiquo.com>",
+  "homepage": "https://github.com/vortiquo/vitest-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vortiquo/vitest-config.git",
+    "directory": "configs/vitest-config"
+  },
+  "bugs": {
+    "url": "https://github.com/vortiquo/vitest-config/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "vitest",
+    "vitest-config",
+    "testing",
+    "react",
+    "nextjs",
+    "nodejs",
+    "typescript",
+    "shared-config"
+  ],
+  "exports": {
+    ".": "./index.ts",
+    "./base": "./base.ts",
+    "./node": "./node.ts",
+    "./react": "./react.ts",
+    "./nextjs": "./nextjs.ts"
+  },
+  "files": [
+    "*.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.7.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "@ls-lint/ls-lint": "^2.3.1",
+    "@next/eslint-plugin-next": "^16.1.0",
+    "@types/node": "^25.0.3",
+    "@vortiquo/eslint-config": "^1.1.1",
+    "@vortiquo/typescript-config": "^1.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --max-warnings=0 --no-warn-ignored .",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix --max-warnings=0 --no-warn-ignored .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "commit": "cz",
+    "typecheck": "tsc --noEmit"
+  }
+}
